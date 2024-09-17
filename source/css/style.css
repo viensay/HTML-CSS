@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 @layer base{
     :root{
         --backgroundcolor-primay : 249, 245, 246;
@@ -24,142 +23,303 @@
 
 }
 
-@layer main{
-    main{
-        width: 80%;
-        margin: auto;
-        height: 70vh;
-        padding: 20px;
+@media(min-width: 930px)
+{
+
+    
+    @layer main{
+        main{
+            width: 80%;
+            margin: auto;
+            height: 70vh;
+            padding: 20px;
+        }
+    
+    }
+    
+    @layer header{
+        header{
+            position: sticky;
+            background-color: rgb(var(--backgroundcolor-primay));
+            margin: auto;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+    
+        h1{
+            width: 30%;
+        }
+    
+        nav{
+            width: 70%;
+            align-self: center;
+        }
+    
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            list-style-type: none;
+        }
+    
+        a, a:visited{
+            color: var(--colorfont--primary);
+            text-decoration: none;
+            font-size: 1.02em;
+            letter-spacing: 0.08em;
+        }
+    
+        a:hover{
+            color: var(--backgroundcolor--secondary);
+            font-weight: bolder;
+        }
+    
+    }
+    
+    @layer footer{
+        footer{
+            width: 80%;
+            padding: 20px;
+            margin: auto;
+        }
+    }
+    
+    @layer form{
+        form{
+            width: 50%;
+            margin: auto;
+            position: relative;
+            top:10%;
+            background-color: rgba(var(--backgroundcolor-primay),0.4);
+            padding: 3.5%;
+            font-size: 1.3em;
+            border-radius: 14%;
+        }
+    
+        legend{
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom:1%;
+        }
+    
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            border: none;
+        }
+    
+        input,select{
+            border: none;
+            line-height: 2em;
+            appearance: none;
+            margin-bottom: 1%;
+        }
+    
+        textarea{
+            height: 30vh;
+            border: none;
+        }
+    
+    
+        form button{
+            display: block;
+            margin: auto;
+            font-size: 1.5rem;
+            padding: 2%;
+            margin-top: 1%;
+            border-radius: 20%;
+            border : 3px solid rgb(var(--backgroundcolor-primay));
+            background-color: var(--backgroundcolor-primay);
+        }
+    
+        form button:hover{
+            border: 4px solid white;
+            font-size:1.2rem;
+        }
+    
+        form button:clicked{
+            background-color: white;
+        }
+    
+        ::placeholder{
+            font-style: italic;
+            opacity: 0.6;
+        }
+    }
+    
+    @layer table{
+        th{
+            line-height: 2em;
+            padding-right: 5px;
+        }
+        tr:nth-child(even){
+            background-color: rgb(var(--backgroundcolor-primay));
+        }
+    
+        table{
+            margin-top: 2%;
+            border-top: 1px solid rgba(var(--colorfont--primary),0.8);
+        }
+    }
+    
+    @layer vue{
+        #vue_article{
+            display: flex;
+            justify-content: space-evenly;
+            height: 50vh;
+        }
+    
+        article{
+            width: 25%;
+            height: 100%;
+            height: 30vh;
+        }
+    
+        h3{
+            margin-top: 5%;
+            margin-right: 5%;
+            border-bottom: 3px solid rgb(var(--backgroundcolor-primay));
+            height: 30%;
+    
+        }
+    
+        .date_article{
+            font-size: 0.8em;
+            font-style: italic;
+            opacity: 0.5;
+            margin-top: 3%;
+        }
+    
+        iframe{
+            margin-top: 5%;
+            width: 100%;
+            height: 50vh;
+        }
+    
+        figure img{
+            height: 60vh;
+            width: 100%;
+            opacity: 0.5;
+            border-image: linear-gradient(90deg,rgba(var(--backgroundcolor-primay),1) , rgba(var(--backgroundcolor-primay),0.8));
+        }
+    
+    }
+    
+    @layer base , header, main, footer, form, table, vue;
+}
+
+@media(max-width:930px){
+    @layer base-mini{
+        header{
+            background-color: rgb(var(--backgroundcolor-primay));
+        }
+    
+        h1{
+            text-align: center;
+        }
+    
+        h2,h3{
+            margin-bottom: 5%;
+        }
+
+        h3{
+            border-bottom: 3px solid rgb(var(--backgroundcolor-primay));
+        }
+    
+        nav{
+            display: block;
+            text-align: center;
+        }
+    
+        a{
+            color: rgb(var(--colorfont--primary));
+            text-decoration: none;
+        }
+    
+        main{
+            height: 70vh;
+            padding: 10px;
+        }
+    
+        iframe{
+            display: none;
+        }
+
+        .date_article{
+            margin-top: 3%;
+            margin-bottom: 6%;
+        }
+
+        footer{
+            display: none;
+        }
+    }
+
+
+    @layer form{
+        tr:nth-child(even){
+            background-color: rgb(var(--backgroundcolor-primay));
+        }
+        
+        form{
+            margin: auto;
+            width: 80%;
+            padding: 3.5%;
+            background-color: rgba(var(--backgroundcolor-primay),0.4);
+        }
+
+        fieldset{
+            display: flex;
+            flex-direction: column;
+            border: none;
+        }
+
+        input,select{
+            border: none;
+            line-height: 2em;
+            appearance: none;
+            margin-bottom: 1%;
+        }
+    
+        textarea{
+            height: 30vh;
+            border: none;
+        }
+        textarea{
+            height: 30vh;
+            border: none;
+        }
+    
+    
+        form button{
+            display: block;
+            margin: auto;
+            font-size: 1.5rem;
+            padding: 2%;
+            margin-top: 1%;
+            border-radius: 20%;
+            border : 3px solid rgb(var(--backgroundcolor-primay));
+            background-color: var(--backgroundcolor-primay);
+        }
+    
+        form button:hover{
+            border: 4px solid white;
+            font-size:1.2rem;
+        }
+    
+        form button:clicked{
+            background-color: white;
+        }
+    
+        ::placeholder{
+            font-style: italic;
+            opacity: 0.6;
+        }
     }
 
 }
 
-@layer header{
-    header{
-        position: sticky;
-        background-color: rgb(var(--backgroundcolor-primay));
-        margin: auto;
-        width: 80%;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-    h1{
-        width: 30%;
-    }
-
-    nav{
-        width: 70%;
-        align-self: center;
-    }
-
-    ul{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        list-style-type: none;
-    }
-
-    a, a:visited{
-        color: var(--colorfont--primary);
-        text-decoration: none;
-        font-size: 1.02em;
-        letter-spacing: 0.08em;
-    }
-
-    a:hover{
-        color: var(--backgroundcolor--secondary);
-        font-weight: bolder;
-    }
-
-}
-
-@layer footer{
-    footer{
-        width: 80%;
-        padding: 20px;
-        margin: auto;
-    }
-}
-
-@layer form{
-    form{
-        width: 50%;
-        margin: auto;
-        position: relative;
-        top:10%;
-        background-color: rgba(var(--backgroundcolor-primay),0.4);
-        padding: 3.5%;
-        font-size: 1.3em;
-        border-radius: 14%;
-    }
-
-    legend{
-        text-align: center;
-        text-transform: uppercase;
-        margin-bottom:1%;
-    }
-
-    fieldset{
-        display: flex;
-        flex-direction: column;
-        border: none;
-    }
-
-    input,select{
-        border: none;
-        line-height: 2em;
-        appearance: none;
-        margin-bottom: 1%;
-    }
-
-    textarea{
-        height: 30vh;
-        border: none;
-    }
-
-
-    form button{
-        display: block;
-        margin: auto;
-        font-size: 1.5rem;
-        padding: 2%;
-        margin-top: 1%;
-        border-radius: 20%;
-        border : 3px solid rgb(var(--backgroundcolor-primay));
-        background-color: var(--backgroundcolor-primay);
-    }
-
-    form button:hover{
-        border: 4px solid white;
-        font-size:1.2rem;
-    }
-
-    form button:clicked{
-        background-color: white;
-    }
-
-    ::placeholder{
-        font-style: italic;
-        opacity: 0.6;
-    }
-}
-
-@layer table{
-    th{
-        line-height: 2em;
-        padding-right: 5px;
-    }
-    tr:nth-child(even){
-        background-color: rgb(var(--backgroundcolor-primay));
-    }
-
-    table{
-        margin-top: 2%;
-        border-top: 1px solid rgba(var(--colorfont--primary),0.8);
-    }
-}
-
-@layer base , header, main, footer, form, table;
+@layer base;

@@ -1,5 +1,5 @@
 <header>
-    <h1>Articles</h1>
+    <h1><a href="index.php">Articles</a></h1>
     <nav>
         <ul>
             <li><a href="index.php">Home</a></li>

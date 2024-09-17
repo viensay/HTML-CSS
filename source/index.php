@@ -20,6 +20,11 @@
             Esse quod dolores cupiditate.
         </p>
 
+        <iframe src="view_article.php" frameborder="0" scrolling="no"></iframe>
+         <!-- <figure>
+            <img src="images/image_principale.jpg" alt="photo d'un ordinateur">
+         </figure> -->
+
     </main>
 
     <?php

@@ -25,7 +25,7 @@
                 <label for="f_genre" class="s_genre">Genre</label>
                 <select name="f_genre" id="f_genre">
                     <option value=""></option>
-                    <option value="H">Homme</option>
+                    <option value="M">Homme</option>
                     <option value="F">Femme</option>
                     <option value="X">Autre</option>
                 </select>

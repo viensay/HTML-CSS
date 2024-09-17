@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+@layer base{
+    :root{
+        --backgroundcolor-primay : 249, 245, 246;
+        --backgroundcolor--secondary : 210, 212, 218;
+        --colorfont--primary: 55, 56, 61;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        color: var(--colorfont--primary);
+        font-family: "Raleway", system-ui;
+    }
+
+    h1, h2{
+        text-transform: uppercase;
+    }
+
+}
+
+@layer main{
+    main{
+        width: 80%;
+        margin: auto;
+        height: 70vh;
+        padding: 20px;
+    }
+}
+
+@layer header{
+    header{
+        position: sticky;
+        background-color: rgb(var(--backgroundcolor-primay));
+        margin: auto;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    h1{
+        width: 30%;
+    }
+
+    nav{
+        width: 70%;
+        align-self: center;
+    }
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+    }
+
+    a, a:visited{
+        color: var(--colorfont--primary);
+        text-decoration: none;
+        font-size: 1.02em;
+        letter-spacing: 0.08em;
+    }
+
+    a:hover{
+        color: var(--backgroundcolor--secondary);
+        font-weight: bolder;
+    }
+
+}
+
+@layer footer{
+    footer{
+        width: 80%;
+        padding: 20px;
+        margin: auto;
+    }
+}
+
+@layer form{
+    form{
+        width: 50%;
+        margin: auto;
+        position: relative;
+        top:10%;
+        background-color: rgba(var(--backgroundcolor-primay),0.4);
+        padding: 3.5%;
+        font-size: 1.3em;
+        border-radius: 14%;
+    }
+
+    legend{
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom:1%;
+    }
+
+    fieldset{
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+
+    input,select{
+        border: none;
+        line-height: 2em;
+        appearance: none;
+        margin-bottom: 1%;
+    }
+
+
+    form button{
+        display: block;
+        margin: auto;
+        font-size: 1.5rem;
+        padding: 2%;
+        margin-top: 1%;
+        border-radius: 20%;
+        border : 3px solid rgb(var(--backgroundcolor-primay));
+        background-color: var(--backgroundcolor-primay);
+    }
+
+    form button:hover{
+        font-weight: bolder;
+    }
+
+    ::placeholder{
+        font-style: italic;
+        opacity: 0.6;
+    }
+}
+
+@layer base , header, main, footer, form;

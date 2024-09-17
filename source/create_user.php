@@ -31,7 +31,7 @@
                 </select>
 
                 <label for="f_birthdate">Date de naissance</label>
-                <input type="date" name="f_birthdat" id="f_birthdat">
+                <input type="date" name="f_birthdate" id="f_birthdate">
 
                 <label for="f_town">Ville</label>
                 <input type="text" name="f_town" id="f_town" placeholder="Veuillez introduire la ville">

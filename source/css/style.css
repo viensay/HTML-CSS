@@ -31,6 +31,7 @@
         height: 70vh;
         padding: 20px;
     }
+
 }
 
 @layer header{
@@ -114,6 +115,11 @@
         margin-bottom: 1%;
     }
 
+    textarea{
+        height: 30vh;
+        border: none;
+    }
+
 
     form button{
         display: block;
@@ -127,7 +133,12 @@
     }
 
     form button:hover{
-        font-weight: bolder;
+        border: 4px solid white;
+        font-size:1.2rem;
+    }
+
+    form button:clicked{
+        background-color: white;
     }
 
     ::placeholder{
@@ -136,4 +147,19 @@
     }
 }
 
-@layer base , header, main, footer, form;
+@layer table{
+    th{
+        line-height: 2em;
+        padding-right: 5px;
+    }
+    tr:nth-child(even){
+        background-color: rgb(var(--backgroundcolor-primay));
+    }
+
+    table{
+        margin-top: 2%;
+        border-top: 1px solid rgba(var(--colorfont--primary),0.8);
+    }
+}
+
+@layer base , header, main, footer, form, table;

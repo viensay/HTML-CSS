@@ -14,21 +14,7 @@
         die('Erreur : '. $erreur->getMessage());
     }
 
-    // echo $_POST['f_firstname'];
-    // echo isset($_POST['f_firstname']);
 
-    // echo $_POST['f_lastname'];
-    // echo isset($_POST['f_lastname']);
-
-    // echo $_POST['f_genre'];
-    // echo isset($_POST['f_genre']);
-
-    // echo $_POST['f_birthdate'];
-    // echo isset($_POST['f_birthdate']);
-
-    // echo $_POST['f_town'];
-    // echo isset($_POST['f_town']);
-    //
 
 
     if  (

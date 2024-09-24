@@ -6,6 +6,7 @@
     <title>Intégration d'article</title>
 </head>
 <body>
+    
 
     <?php 
         try {
@@ -34,6 +35,7 @@
         else{
             echo 'Rien n\'a été introduit dans la base de données';
         }
+        //
 
         header('Location:../index.php');
     ?>

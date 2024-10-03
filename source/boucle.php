@@ -72,42 +72,42 @@
 //     }
 // }
 
-$classe = [
-    [
-        'firstname' => "Julien",
-        'lastname' => "Dunia",
-        'note' => [8,15,12]
-    ],
-    [
-        'firstname' => "Hakima",
-        'lastname' => "Darmouch",
-        'note' => [18,5,10]
-    ],
-    [
-        'firstname' => "Christian",
-        'lastname' => "Bale",
-        'note' => [7,19,5]
-    ]
+// $classe = [
+//     [
+//         'firstname' => "Julien",
+//         'lastname' => "Dunia",
+//         'note' => [8,15,12]
+//     ],
+//     [
+//         'firstname' => "Hakima",
+//         'lastname' => "Darmouch",
+//         'note' => [18,5,10]
+//     ],
+//     [
+//         'firstname' => "Christian",
+//         'lastname' => "Bale",
+//         'note' => [7,19,5]
+//     ]
 
-    ];
+//     ];
 
-    foreach($classe as $tableauclasse){
-        foreach($tableauclasse as $nomi => $valeur){
-            if(is_array($valeur)){
-                echo $nomi . " : ";
-                $somme = 0;
-                foreach($valeur as $pointpp){
-                    $somme += $pointpp;
-                }
-                echo 'Moyenne ' . ($somme/3) . "\n";
-            }
-            else{
-                echo $nomi . ' : ' . $valeur . "\n";
-            }
-        }
+//     foreach($classe as $tableauclasse){
+//         foreach($tableauclasse as $nomi => $valeur){
+//             if(is_array($valeur)){
+//                 echo $nomi . " : ";
+//                 $somme = 0;
+//                 foreach($valeur as $pointpp){
+//                     $somme += $pointpp;
+//                 }
+//                 echo 'Moyenne ' . ($somme/3) . "\n";
+//             }
+//             else{
+//                 echo $nomi . ' : ' . $valeur . "\n";
+//             }
+//         }
         
-        echo "\n";
-    }
+//         echo "\n";
+//     }
 
 
 

@@ -109,6 +109,36 @@
 //         echo "\n";
 //     }
 
+$mois = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+$nombre = readline("Veuillez introduire un nombre entre 1 et 12 : ");
+
+switch ($nombre){
+    case 1  : echo "$mois[0]" ;
+                break; 
+    case 2  : echo "$mois[1]" ;
+                break; 
+    case 3  : echo "$mois[2]" ;
+                break; 
+    case 4  : echo "$mois[3]" ;
+                break; 
+    case 5  : echo "$mois[4]" ;
+                break; 
+    case 6  : echo "$mois[5]" ;
+                break; 
+    case 7  : echo "$mois[6]" ;
+                break; 
+    case 8  : echo "$mois[7]" ;
+                break; 
+    case 9  : echo "$mois[8]" ;
+                break; 
+    case 10 : echo "$mois[9]" ;
+                break; 
+    case 11 : echo "$mois[10]";
+                break; 
+    case 12 : echo "$mois[11]";
+                break;
+    default : echo "Vous n'avez pas introduit un bon nombre." ;
+};
 
 
 ?>

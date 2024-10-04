@@ -75,7 +75,7 @@ function trouverMax(tableau){
             nombre = tableau[i];
         }
     }
-    document.write('Le nombre le plus grand du tableau est ' + nombre);
+    document.getElementById("test-script").innerHTML += 'Le nombre le plus grand du tableau est ' + nombre + '<br>';
     return nombre;
 }
 
@@ -91,26 +91,46 @@ function remplirTableau(){
 }
 
 function afficheTableau(tab){
+    document.getElementById("test-script").innerHTML += 'Voici le contenu du tableau : ';
+    document.getElementById("test-script").innerHTML += "[" ;
     for(let i = 0; i < tab.length -1 ; i++){
-        document.write(tab[i] + '<br>');
+        document.getElementById("test-script").innerHTML += tab[i] + ',';
     }
+    document.getElementById("test-script").innerHTML += "] <br>";
 }
 
 function valeurExiste(tab){
     let present = false;
-    let mot = prompt('Veuillez introduire une valeur : ')
+    let phrase = prompt('Veuillez introduire une valeur : ');
     for(let i = 0 ; i < tab.length ; i++){
-        if(mot == tab[i]){
+        if(phrase == tab[i]){
             present = true;
-            document.write('La valeur ' + mot + ' existe dans le tableau !');
+            document.getElementById("test-script").innerHTML += 'La valeur ' + phrase + ' existe dans le tableau ! <br>';
+        }
+    }
+    if(!present){
+        document.getElementById("test-script").innerHTML += 'La valeur ' + phrase + ' n\'existe pas dans le tableau ! <br>';
+    }
+
+}
+
+function elementEstPair(tab){
+    document.getElementById("test-script").innerHTML += 'Voici les nombres pairs du tableau : <br>';
+    for(let i = 0 ; i < tab.length ; i++){
+        if(tab[i]%2 == 0){
+            document.getElementById("test-script").innerHTML += tab[i] + ' est pair. <br>';
         }
     }
 }
 
+
 let tableau = [];
 tableau = remplirTableau(tableau);
+
 afficheTableau(tableau);
 
 trouverMax(tableau);
 
 valeurExiste(tableau);
+
+elementEstPair(tableau);

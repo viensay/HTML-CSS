@@ -207,11 +207,19 @@
         }
     
     }
+
+    @layer tableau{
+        #test-script{
+            margin-top: 10vh;
+            font-weight: bolder;
+        }
+    }
     
-    @layer base , header, main, footer, form, table, vue;
+    @layer base , header, main, footer, form, table, vue, tableau;
 }
 
 @media(max-width:930px){
+
     @layer base-mini{
         header{
             background-color: rgb(var(--backgroundcolor-primay));
@@ -317,6 +325,13 @@
         ::placeholder{
             font-style: italic;
             opacity: 0.6;
+        }
+    }
+
+    @layer tableau{
+        #test-script{
+            margin: 10vh;
+            font-weight: bolder;
         }
     }
 

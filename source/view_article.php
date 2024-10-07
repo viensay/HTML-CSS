@@ -36,7 +36,7 @@
                     <?php echo $rangee['description'];?>
 
                 </p>
-                <p class="date_article">C'est article a été créé le <strong> <?php echo $rangee['created_at']; ?> </strong> et a été modifié le <strong><?php echo $rangee['updated_at'];?></strong></p>
+                <p class="date_article">C'est article a été créé le <strong> <?php echo $rangee['created_at']; ?> </strong> et a été modifié le <strong><?php echo $rangee['update_at'];?></strong></p>
             </article>
 
             <?php

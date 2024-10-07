@@ -94,7 +94,12 @@ function afficheTableau(tab){
     document.getElementById("test-script").innerHTML += 'Voici le contenu du tableau : ';
     document.getElementById("test-script").innerHTML += "[" ;
     for(let i = 0; i < tab.length -1 ; i++){
-        document.getElementById("test-script").innerHTML += tab[i] + ',';
+        if(tab[i] == tab.length -1){
+            document.getElementById("test-script").innerHTML += tab[i];
+        }
+        else{
+            document.getElementById("test-script").innerHTML += tab[i] + ',';
+        }        
     }
     document.getElementById("test-script").innerHTML += "] <br>";
 }
@@ -123,14 +128,54 @@ function elementEstPair(tab){
     }
 }
 
+function creerTableauNombre(nbr1,nbr2){
+    let tab = [];
+    while(nbr1 <= nbr2 +1)
+    {
+        tab.push(nbr1);
+        nbr1++;
+    }
+    return tab;
+}
+
+function calculerSomme(nbrMax){
+let compteur = 1;
+let somme = 0;
+    while(compteur < nbrMax +1){
+        somme += compteur;
+        compteur++;
+    }
+return somme;
+}
+
+function entrezMin(){
+    let nbrMin = prompt('Entrez le minimum :');
+    return nbrMin;
+}
+
+function entrezMax(){
+    let nbrMax = prompt('Entrez le maximum :');
+    return nbrMax;
+}
+
 
 let tableau = [];
-tableau = remplirTableau(tableau);
+// tableau = remplirTableau(tableau);
 
+// afficheTableau(tableau);
+
+// trouverMax(tableau);
+
+// valeurExiste(tableau);
+
+// elementEstPair(tableau);
+let limitMin = entrezMin();
+let limitMax = entrezMax();
+tableau = creerTableauNombre(limitMin,limitMax);
 afficheTableau(tableau);
 
-trouverMax(tableau);
+let valeurMax = entrezMax();
 
-valeurExiste(tableau);
+let somme = calculerSomme(valeurMax);
 
-elementEstPair(tableau);
+document.getElementById("test-script").innerHTML += somme;
